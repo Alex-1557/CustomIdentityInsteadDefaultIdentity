@@ -1,0 +1,66 @@
+﻿/// <reference path="mixin.less" />
+/// <reference path="variables.less" />
+
+.dashboard{
+     padding: 15px 40px 20px;
+    .flex-conteiner{.flex-box();.flex-direction(row);.flex-wrap(wrap);.flex-justify-content(space-between);}
+    .flex-center{.flex-box();.flex-justify-content(center);.align-items(center);}
+    .allocations{min-width: 225px;max-width:250px;width:100%;
+        ul{padding:0;}
+        .total{font-weight:bold;}
+    }
+    .board-box{
+        .flex-wrap(wrap-reverse);
+    }
+    .statuses{max-width:900px;width:100%;
+         .flex-conteiner{.flex-wrap(wrap);.flex-justify-content(center);}
+         @status-value-size:160px;
+        .status-block{width:auto;box-shadow: 0 10px 20px 1px #888888;margin:15px;text-align:center;padding:5px;position:relative;
+            .status-value{font-size: 40px;border: 7px solid;border-radius: 50%;width:@status-value-size;height:@status-value-size;margin:5px;
+                &.draft{border-color:@workflow-draft;}
+                &.onHold{border-color:@workflow-onHold;}
+                &.readyToStart{border-color:@workflow-readyToStart;}
+                &.inProgress{border-color:@workflow-inProgress;}
+                &.workStoppedDelayed{border-color:@workflow-delayed;}
+                &.punchItems{border-color:@workflow-punchItems;}
+                &.jobComplete{border-color:@workflow-jobComplete;}
+                &.jobStop{border-color:#000000;}
+                &.modifyJob{border-color:@workflow-modifyJob;}
+            }
+            .status-name{font-size: 18px;}
+            
+            .info-i{position:absolute;top:5px;right:5px;font-size: 20px;}
+        }
+
+    }
+    .statistic-box{.flex-direction(column);.flex-justify-content(space-between);}
+
+}
+
+@media(min-width:500px)
+{
+    .dashboard .statistic-box{.flex-direction(row);width:100%;}
+}
+
+@media(min-width:1200px)
+{
+    .dashboard {
+        .flex-conteiner{.flex-wrap(nowrap);}
+        .board-box{.flex-justify-content(space-around);}                        
+        .statistic-box{.flex-direction(column);.flex-justify-content(flex-start);width:auto;margin-top: 10px;
+            .allocations:first-child{height:220px;}
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .dashboard {
+            .allocations {
+                min-width: initial; 
+                max-width: 250px;
+                width: 100%;
+            }
+        }
+}

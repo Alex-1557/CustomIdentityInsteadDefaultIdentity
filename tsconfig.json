@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@angular/*": [ "../node_modules/@angular/*" ],
+      "@infra/*": [ "app/Infrastructure/*" ],
+      "@api/*": [ "app/api/*" ],
+      "@common/*": [ "app/common/*" ],
+      "@directives/*": [ "app/directives/*" ],
+      "@components/*": [ "app/components/*" ],
+      "@services/*": [ "app/services/*" ]
+    },
+    "module": "esnext",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noStrictGenericChecks": true,
+    "skipLibCheck": true,
+    "target": "es2020",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

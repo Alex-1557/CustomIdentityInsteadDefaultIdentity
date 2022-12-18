@@ -1,0 +1,66 @@
+﻿grid {
+    .grid-paging {
+        float: right;
+    }
+
+    .grid-paging-item{
+        float: left;
+        margin-left: 20px;
+    }
+
+    li.paginate_button.current > a {
+        border: 1px solid #51ad28;
+        margin-right: 1px;
+    }
+}
+
+
+.materialsList, .requestMaterialsList {
+    // confirm to shop
+    &.materialsList-4 {
+        .column_notes {
+            input { max-width: 100px; }
+        }
+    }
+    &.modal-body {
+        padding: 20px 20px 30px 20px;
+    }
+    .column_jobLocationName { max-width: 220px; }
+    .column_jobLocationViewNumber { max-width: 120px; }
+    .column_materialName { max-width: 120px; }
+    .column_materialBrandName { max-width: 120px; }
+    .column_vendor { max-width: 120px; }
+    .column_size { max-width: 120px; }
+    .column_unitPrice,
+    .column_cost {
+        input { max-width: 70px; }
+    }
+
+    .column_invoiceUnitPrice,
+    .column_invoiceCost {
+        input { max-width: 70px; }
+    }
+
+    .column_quantity, .column_quantityStr, .column_qty {
+        input { max-width: 50px; }
+    }
+    .column_notes {
+        input { max-width: 90px; }
+    }
+    .column_numberPO {
+        input { max-width: 60px; }
+    }
+}
+
+.requestMaterialsList {
+    th {
+        white-space: nowrap;
+    }
+    .column_deliveredType {
+        font-weight: bold;
+        white-space: nowrap;
+        &.deliveryMethod_3 {
+            color: #6aaa40;
+        }
+    }
+}
